@@ -11,5 +11,8 @@
   "dependencies": {
     "ejs": "^3.1.5",
     "express.js": "^1.0.0"
+  },
+  "devDependencies": {
+    "express": "^4.17.1"
   }
 }
