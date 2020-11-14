@@ -4,7 +4,28 @@
     <body>
         <%- include('../include/header.ejs') %>
         <div class="container">
-            게시판 컨텐츠
+            <article class="main_content">
+                <form id="test" action="board" method="post">
+                    <table width="400">
+                        <tr>
+                            <th>이름</th>
+                            <td><input type="text" name="name" id="name" size="10" maxLength="10"></td>
+                        </tr>
+                        <tr>
+                            <th>블로그</th>
+                            <td><input type="text" name="blog" id="blog" size="20" maxLength="20"></td>
+                        </tr>
+                        <tr>
+                            <th>홈페이지</th>
+                            <td><input type="text" name="homepage" id="homepage" size="20" maxLength="20"></td>
+                        </tr>
+                        <tr>
+                            <th>전송</th>
+                            <td><input type="submit"></td>
+                        </tr>
+                    </table>
+                </form>
+            </article>
         </div>
         <%- include('../include/footer.ejs') %>
     </body>

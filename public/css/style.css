@@ -1,22 +1,17 @@
-html{
+html,body{
     height:100%;
     margin:0;
     padding:0;
+    color:#dddddd;
+}
+h1,h2,h3,h4,h5{
+    margin: 0;
+    padding: 0;
 }
 body{
-    margin:0;
-    height: 100%;
-    padding-top:50px; /* header height */
-}
-.wrapper {
-    position: relative;
-    min-height:100%;
-    padding-bottom: 75px; /* footer height */
-
+    background-color: black;
 }
 header {
-    position: fixed;
-    top:0;
     left:0;
     right:0;
 
@@ -24,50 +19,70 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    padding:1px;
-    height: 50px;
+
     background-color: #2d2f34;
+    border-bottom: 1px solid #383840;
 }
 .nav{
-    display:flex;
+    position: relative;
     list-style: none;
     margin: 0;
     padding: 0;
 }
-
+.nav>ul{
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
 .nav>li{
-    margin:5px 15px;
-    padding:0;
+    float: left;
+    padding: 0;
+
 }
 .nav>li>a{
     display: block;
-    mso-ansi-font-weight: bold;
-    font-size: 18px;
-    margin:0;
-    color:#ffffff;
+
+    padding:.6rem .7rem .6rem;
+
+    font-size: 1.1rem;
+    color:#dddddd;
     text-decoration: none;
     text-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
 
 .nav>li:hover > a{
-    background-color: #ffffff;
-    color:black;
-    margin:0;
+    background-color: #383b40;
 }
 .container{
+    height: auto;
     text-align: center;
 }
+.main_content{
+    width: 700px;
+    margin: 0 auto;
+    background-color: #1f2023;
+}
+
 footer{
-    position: absolute;
-    bottom:0;
-    left:0;
-    right:0;
-
-    height: 75px;
-    background-color: #2d2f34;
-}
-
-.footer_div1{
+    display: block;
+    margin:0 auto;
+    padding:1rem;
     text-align: center;
+    background-color: #1f2023;
+    border-top: 1px solid #383840;
+}
+.footer_div1{
+
     color:#fff!important;
+}
+.footer_div1>p>a{
+    color:olivedrab;
+    text-decoration: none;
+}
+.footer_div1>p>a:hover{
+    text-decoration: underline;
+}
+.seperate_line{
+    margin:0.5rem;
+    color:#aaa;
 }
