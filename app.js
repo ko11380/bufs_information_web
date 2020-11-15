@@ -8,7 +8,7 @@ var logger = require('morgan');
 var indexRouter = require('./router/index');
 var wikiRouter = require('./router/wiki');
 var boardRouter = require('./router/board');
-
+var mysqlRouter = require('./router/mysql');
 
 app.set('views',__dirname + '/views');
 app.set('view  engine', 'ejs');
@@ -27,4 +27,5 @@ app.use(express.static('public'));
 app.use('/',indexRouter);
 app.use('/wiki',wikiRouter);
 app.use('/board',boardRouter);
+app.use('/mysql',mysqlRouter);
 

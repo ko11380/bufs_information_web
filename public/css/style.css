@@ -4,6 +4,10 @@ html,body{
     padding:0;
     color:#dddddd;
 }
+*{
+    padding: 0;
+    margin: 0;
+}
 h1,h2,h3,h4,h5{
     margin: 0;
     padding: 0;
@@ -55,10 +59,10 @@ header {
 }
 .container{
     height: auto;
-    text-align: center;
 }
 .main_content{
     width: 700px;
+    min-height: 900px;
     margin: 0 auto;
     background-color: #1f2023;
 }
@@ -82,7 +86,157 @@ footer{
 .footer_div1>p>a:hover{
     text-decoration: underline;
 }
-.seperate_line{
-    margin:0.5rem;
-    color:#aaa;
+.board_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+.board_title{
+    border: 2px solid #5b5f68;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-top: 20px;
+}
+.board_title>a{
+    margin: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color:#dddddd;
+}
+.write{
+    position: relative;
+    margin-bottom: 10px;
+    border:2px solid #5b5f68;
+}
+.write p{
+    padding: 15px;
+    border-bottom: 1px solid #5b5f68;
+    background-color: #1f2023;
+}
+.write input.title{
+    width: 100%;
+    line-height: 20px;
+    border:0;
+    color: #dddddd;
+    font-size:16px;
+    font-weight: bold;
+    background-color: #1f2023;
+}
+.write input.name{
+    width: 42%;
+    height: 20px;
+    line-height: 20px;
+    border:0;
+    color: #dddddd;
+    font-size:16px;
+    font-weight: bold;
+    background-color: #1f2023;
+}
+.write input.passwd{
+    margin-right: 5px;
+    width: 42%;
+    height: 20px;
+    line-height: 20px;
+    border:0;
+    color: #dddddd;
+    font-size:16px;
+    font-weight: bold;
+    background-color: #1f2023;
+}
+.write textarea{
+    width: 100%;
+    height: 250px;
+    border:0;
+    color:#dddddd;
+    font-size:14px;
+    resize:none;
+    background-color: #1f2023;
+}
+.write div.clearBothOnly{
+    clear: both;
+    margin:0;
+    padding: 0;
+    height: 0;
+    background: #242528;
+}
+.write button.submit{
+    height: 30px;
+    width: 60px;
+    border:0;
+    font-size: 10px;
+    font-weight: bold;
+    color: #dddddd;
+    cursor: pointer;
+    background-color:red;
+}
+#write_button{
+    display: block;
+    margin-bottom: 10px;
+    padding:0 16px;
+    height: 50px;
+    line-height: 46px;
+    border:2px solid #5b5f68;
+    cursor:text;
+    background: #242528;
+
+    font-size:14px;
+    color: #dddddd;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.board_content{
+    margin-bottom: 20px;
+}
+.board_content>article{
+    margin-bottom: -1px;
+
+    border: 1px solid #5b5f68;
+}
+.article{
+    display: block;
+    padding: 1rem 1rem 2rem;
+    text-decoration: none;
+}
+.article>h2.medium{
+    margin-bottom: 5px;
+    line-height: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: normal;
+    color:#dddddd;
+}
+.article>p.small{
+    float: left;
+    margin-bottom: 5px;
+    line-height: 15px;
+    color: #a6a6a6;
+    font-size: 12px;
+}
+.article>span.separate{
+    float: left;
+    margin-left: .2rem;
+    margin-right: .2rem;
+    margin-bottom: 6px;
+    line-height: 15px;
+    font-size: 12px;
+    color: #a6a6a6;
+}
+.article>h3.small{
+
+    float: right;
+    max-width: 90px;
+    height: 15px;
+    line-height: 15px;
+    font-size: 11px;
+    font-weight: normal;
+    letter-spacing: 0;
+    color:#dddddd;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

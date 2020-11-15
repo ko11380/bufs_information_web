@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <%- include('../include/head.ejs') %>
+    <head>
+        <title><%=title%></title>
+        <%- include('../include/head.ejs') %>
+    </head>
     <body>
         <%- include('../include/header.ejs') %>
         <div class="container">
             <article class="main_content">
-                <form id="test" action="board" method="post">
-                    <table width="400">
-                        <tr>
-                            <th>이름</th>
-                            <td><input type="text" name="name" id="name" size="10" maxLength="10"></td>
-                        </tr>
-                        <tr>
-                            <th>블로그</th>
-                            <td><input type="text" name="blog" id="blog" size="20" maxLength="20"></td>
-                        </tr>
-                        <tr>
-                            <th>홈페이지</th>
-                            <td><input type="text" name="homepage" id="homepage" size="20" maxLength="20"></td>
-                        </tr>
-                        <tr>
-                            <th>전송</th>
-                            <td><input type="submit"></td>
-                        </tr>
-                    </table>
-                </form>
+                <div class="board_container">
+                    <div class="board_title">
+                        <a href="/board?list=1">자유 게시판</a>
+                    </div>
+                    <div class="board_content" id="board_content">
+                        <a id="write_button" href="#" onclick="showWriteBox()">새 글을 작성해주세요!</a>
+                            <%
+                                for(var i=0; i<rows.length;i++){
+                                    var data = rows[i];
+                            %>
+                            <article>
+                                <a class="article" href="/board/read/<%=data.idx%>">
+                                    <h2 class="medium"><%=data.title%></h2>
+                                    <p class="small">조회수 : <%=data.hit%></p>
+                                    <span class="separate"> | </span>
+                                    <p class="small">작성일 : <%=data.regdate%></p>
+                                    <h3 class="small">작성자 : <%=data.name%></h3>
+                                </a>
+                            </article>
+                            <%}%>
+                    </div>
+                </div>
             </article>
         </div>
         <%- include('../include/footer.ejs') %>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     </body>
 </html>
