@@ -14,8 +14,8 @@ web.set('views',__dirname + '/views');
 web.set('view  engine', 'ejs');
 web.engine('html', require('ejs').renderFile);
 
-web.listen(3000,function (){
-    console.log("Express server has started on port 3000")
+web.listen(8001,function (){
+    console.log("Express server has started on port 8001")
 });
 
 web.use(bodyParser.json());
