@@ -4,7 +4,7 @@ const mysql_odbc = require('../db/db_conn')();
 const conn = mysql_odbc.init();
 
 router.get('/',function(req,res){
-    var page = req.query.page;
+    var page = req.query.list;
     var sql = "select idx, name, title, hit, date_format(modidate,'%Y-%m-%d %H:%i:%s') modidate, "+"date_format(regdate,'%Y-%m-%d %H:%i:%s') regdate from board";
     conn.query(sql, function (err,rows){
         if(err) console.error("err : " + err)
@@ -13,7 +13,7 @@ router.get('/',function(req,res){
 });
 
 router.get('/',function (req,res){
-    res.redirect('/board?page=1')
+    res.redirect('/board?list=1')
 });
 
 router.post('/',function (req,res){
