@@ -21,7 +21,7 @@ web.use(bodyParser.json());
 web.use(bodyParser.urlencoded({extended:false}));
 web.use(cookieParser());
 web.use(logger('dev'));
-web.use(express.static('public'));
+web.use(express.static(__dirname + 'public'));
 
 web.use('/',indexRouter);
 web.use('/wiki',wikiRouter);
