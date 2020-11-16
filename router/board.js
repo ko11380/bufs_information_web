@@ -31,4 +31,17 @@ router.post('/',function (req,res){
     });
 });
 
+router.get('/v/:idx',function (req,res){
+    var idx = req.params.idx;
+
+    var sql = "select idx,name,title,content,regdate,passwd,hit from board where idx=?";
+
+    conn.query(sql,[idx],function (err,rows){
+
+        if(err)console.log("err : "+err);
+        res.render('board/v.ejs',{ title:'부산외대 위키 | 게시글',rows:rows[0] });
+        console.log(rows)
+    })
+});
+
 module.exports = router;

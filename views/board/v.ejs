@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title><%=title%></title>
+    <%- include('../include/head.ejs') %>
+</head>
+<body>
+<%- include('../include/header.ejs') %>
+<div class="container">
+    <article class="main_content">
+        <div class="board_container">
+            <div class="board_content" id="board_content">
+                <h3><%= rows.name %></h3>
+                <p><%= rows.regdate %></p>
+                <h2><%= rows.title %></h2>
+                <p><%= rows.text %></p>
+            </div>
+        </div>
+    </article>
+</div>
+<%- include('../include/footer.ejs') %>
+</body>
+</html>
