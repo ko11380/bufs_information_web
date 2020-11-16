@@ -5,7 +5,7 @@ module.exports = (function (){
             port:'3306',
             user:'bufsinfo',
             password:'zoqtmxhs2020!',
-            database:'bufs_info'
+            database:'bufsinfo'
 
         },
         real: {
