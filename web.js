@@ -8,7 +8,7 @@ const logger = require('morgan');
 const indexRouter = require('./router/index');
 const wikiRouter = require('./router/wiki');
 const boardRouter = require('./router/board');
-const writeRouter = require('./router/board/v');
+const writeRouter = require('./router/board/');
 
 web.set('views',__dirname + '/views');
 web.set('view  engine', 'ejs');
