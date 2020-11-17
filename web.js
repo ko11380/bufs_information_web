@@ -7,8 +7,6 @@ const logger = require('morgan');
 
 const indexRouter = require('./router/index');
 const wikiRouter = require('./router/wiki');
-const boardRouter = require('./router/board');
-const writeRouter = require('./router/board/');
 
 web.set('views',__dirname + '/views');
 web.set('view  engine', 'ejs');
@@ -27,4 +25,3 @@ web.use(express.static(__dirname + '/public'));
 web.use('/',indexRouter);
 web.use('/wiki',wikiRouter);
 web.use('/board',boardRouter);
-web.use('/board/v',writeRouter);
